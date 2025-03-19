@@ -1,0 +1,80 @@
+# general oci parameters
+
+api_fingerprint = 
+api_private_key_path = 
+
+home_region = "us-ashburn-1"
+region = "ap-hyderabad-1"
+tenancy_id = 
+user_id = 
+
+
+
+compartment_id = 
+
+
+#access_key_id = 
+#secret_access_key = 
+
+#################################################
+#Bucket Parameters
+################################################
+
+bucket_name = "demo-navi-backup2"
+storage_tier = "Standard"
+bucket_access_type = "NoPublicAccess"
+bucket_auto_tiering = "Disabled"
+bucket_versioning   = "Enabled"
+bucket_object_events_enabled = true
+
+
+kms_key_id = 
+
+
+#Free-form tag keys are case sensitive.
+freeform_tags = {"Environment"= "Dev"}
+
+# Before enabling retention rules, check this https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usingretentionrules.htm
+# for the interaction of Retention rules with other object storage features 
+
+/*
+retention_rules = [
+  {
+    display_name = "RetentionRule1"
+    time_amount  = 30
+    time_unit    = "DAYS"
+    time_rule_locked = null
+  }
+]
+*/
+
+########################################################################################
+#          Object  Lifecycle Policy
+###########################################################################################
+
+#Objects older than 30 days will be automatically deleted if they match the inclusion_patterns.
+#Objects with names starting with "backup-" or "old-" will be excluded from deletion.
+############################################################################################
+
+
+action           = "DELETE"
+is_enabled       = true
+rule_name        = "DeleteOldObjects"
+time_amount      = 7
+time_unit        = "DAYS"
+target           = "objects"
+inclusion_patterns = ["*.log"]
+exclusion_patterns = ["backup-*"]
+
+
+
+#################################################################################
+#                   Replication Policy
+##################################################################################
+
+source_bucket_name   = "demo-navi-backup2"
+destination_bucket_name = "backup-bucket"
+destination_region_name = "us-ashburn-1"
+replication_policy_name = "BackupReplication"
+
+
