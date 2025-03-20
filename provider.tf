@@ -1,7 +1,7 @@
 # # -----------------------------------------------------------------------------
 # # Provider Requirements if using stack as a module
 # # -----------------------------------------------------------------------------
- # -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Support for multi-region deployments
 # -----------------------------------------------------------------------------
 
@@ -9,14 +9,14 @@ data "oci_identity_region_subscriptions" "regions" {
   tenancy_id = var.tenancy_id
 }
 
- terraform {
-   required_version = "1.9.0"
-   required_providers {
-     oci = {
-       source                = "oracle/oci"
-       version               = ">=6.24.0" 
-     }
-     /*
+terraform {
+  required_version = "1.9.0"
+  required_providers {
+    oci = {
+      source  = "oracle/oci"
+      version = ">=6.24.0"
+    }
+    /*
     backend "s3" {
     bucket                    = "terraaform_backend"
     region                    = "us-ashburn-1"
@@ -37,23 +37,23 @@ data "oci_identity_region_subscriptions" "regions" {
  }
  */
 
-   }
+  }
 
- }
+}
 
- provider "oci" {
-  tenancy_ocid     = var.tenancy_id
-  user_ocid        = var.user_id
-  region           = var.region
+provider "oci" {
+  tenancy_ocid = var.tenancy_id
+  user_ocid    = var.user_id
+  region       = var.region
 }
 provider "oci" {
-  alias            = "home_region"
-  tenancy_ocid     = var.tenancy_id
-  user_ocid        = var.user_id
-  region = var.home_region
+  alias        = "home_region"
+  tenancy_ocid = var.tenancy_id
+  user_ocid    = var.user_id
+  region       = var.home_region
 }
 
- 
+
 
 
 

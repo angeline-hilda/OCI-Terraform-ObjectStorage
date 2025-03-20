@@ -1,26 +1,26 @@
 
 variable "bucket_name" {
-    description = "The name of the OCI Object Storage bucket. Must be unique within the namespace."
-    type = string
-  
+  description = "The name of the OCI Object Storage bucket. Must be unique within the namespace."
+  type        = string
+
 }
 
 variable "storage_tier" {
-    description = "Defines the storage tier for OCI Object Storage. Options: 'Standard' or 'Archive'."
-    type= string
-    default = "Standard"
+  description = "Defines the storage tier for OCI Object Storage. Options: 'Standard' or 'Archive'."
+  type        = string
+  default     = "Standard"
 
-    validation {
+  validation {
     condition     = var.storage_tier == "Standard" || var.storage_tier == "Archive"
     error_message = "Allowed values are 'Standard' or 'Archive'."
   }
-  
+
 }
 
 variable "kms_key_id" {
-    description = "OCID of the KMS key used for encryption in OCI Vault."
-    type        = string
-  
+  description = "OCID of the KMS key used for encryption in OCI Vault."
+  type        = string
+
 }
 
 variable "bucket_access_type" {
@@ -72,9 +72,9 @@ variable "freeform_tags" {
 variable "retention_rules" {
   description = "List of retention rules for the bucket."
   type = list(object({
-    display_name = string
-    time_amount  = number
-    time_unit    = string
+    display_name     = string
+    time_amount      = number
+    time_unit        = string
     time_rule_locked = optional(string, null)
   }))
   default = []

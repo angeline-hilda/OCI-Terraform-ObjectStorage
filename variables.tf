@@ -18,22 +18,22 @@ variable "region" {
 }
 
 variable "compartment_id" {
-    type = string
-    description = "The OCID of the compartment"
+  type        = string
+  description = "The OCID of the compartment"
 
 }
 
 variable "user_id" {
-    type = string
-    description = "The user OCID"
-  
+  type        = string
+  description = "The user OCID"
+
 }
 
 variable "api_fingerprint" {
-  
+
 }
 variable "api_private_key_path" {
 
-  
+
 }
 
