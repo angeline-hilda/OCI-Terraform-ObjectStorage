@@ -26,7 +26,7 @@ Creates an Object Storage bucket with optional versioning and auto-tiering.
 ### Object Versioning
 Enables object versioning to retain previous versions of objects. This helps in retrieving and recovering previous versions, protecting against accidental or malicious overwrites and deletions.
 
-### Aut0-tiering
+### Auto-tiering
 If enabled, helps reduce storage costs by automatically moving objects between the Standard and Infrequent Access storage tiers based on data access patterns. 
 
 ### Retention Rules
