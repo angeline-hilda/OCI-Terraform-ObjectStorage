@@ -32,7 +32,7 @@ terraform {
 
 
     endpoints = {
-      s3 = "https://sehubjapaciaas.compat.objectstorage.us-ashburn-1.oraclecloud.com"
+      s3 = "https://tenancy-namespace.compat.objectstorage.us-ashburn-1.oraclecloud.com"
     }
  }
  */
