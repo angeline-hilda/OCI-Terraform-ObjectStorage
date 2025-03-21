@@ -17,7 +17,7 @@ Ensure you have the following before using this module:
 - [OpenTofu](https://opentofu.org/docs/intro/install/) or [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) installed
 - An Oracle Cloud Infrastruture(OCI) Account
 - [Configure OCI CLI](https://docs.oracle.com/en-us/iaas/Content/dev/terraform/tutorials/tf-provider.htm#prepare) with appropriate credentials
-- Required IAM policies for [Object Storage](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/commonpolicies.htm#object-storage-admins-manage-buckets-objects), [Lifecycle Management](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usinglifecyclepolicies.htm#Service) and [Auto-tiering](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/understandingstoragetiers.htm#auto_tiering)
+- Required IAM policies for user permissions [Object Storage](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/commonpolicies.htm#object-storage-admins-manage-buckets-objects) and service permissions [Lifecycle Management](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usinglifecyclepolicies.htm#Service), [Auto-tiering](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/understandingstoragetiers.htm#auto_tiering) and [Replication](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usingreplication.htm#permissions)
 
 ## Features and Resources
 ### Object Storage Bucket
@@ -41,8 +41,9 @@ Defines rules for automatic management of objects, such as archiving or deleting
 ### Bucket Access Logs
 Stores read/write access logs for auditing and tracking.
 
-## Note
-Before enabling these features, check their interaction with other Object Storage features. Not all features can be enabled simultaneously, and some may have dependencies or limitations when used together.
+
+> **Note:** Before enabling these features, check their [interaction with other Object Storage features](##Documentation). Not all features can be enabled simultaneously, and some may have dependencies or limitations when used together.
+
 
 ## Using with Terraform
 
@@ -87,5 +88,7 @@ tofu destroy # or terraform destroy
 - [OCI Object Storage](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm)
 - [OCI Retention](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usingretentionrules.htm#FeatureInteraction)
 - [OCI LifeCycle Management Policies](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usinglifecyclepolicies.htm#Service)
+- [OCI Auto-tiering](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/understandingstoragetiers.htm#auto_tiering)
+- [OCI Object Versioning](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usingversioning.htm#ScopeVersioning)
 
 ## License
