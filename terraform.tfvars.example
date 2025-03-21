@@ -28,6 +28,9 @@ bucket_versioning   = "Enabled"
 bucket_object_events_enabled = true
 
 
+# if customer managed keys is used for encryption 
+# ocid of the vault
+# Vaults in OCI have an expiration period before deletion. when using Terraform, it's best to create the vault manually and reference its key ID in the module. This avoids the overhead of creation and deletion, which can be time-consuming and may hit service limits. 
 kms_key_id = 
 
 
