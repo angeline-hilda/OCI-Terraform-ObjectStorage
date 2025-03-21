@@ -87,7 +87,6 @@ tofu destroy # or terraform destroy
 - [OCI Terraform](https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/objectstorage_object)
 - [OCI Object Storage](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm)
 - [OCI Retention](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usingretentionrules.htm#FeatureInteraction)
-- [OCI LifeCycle Management Policies](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usinglifecyclepolicies.htm#Service)
 - [OCI Auto-tiering](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/understandingstoragetiers.htm#auto_tiering)
 - [OCI Object Versioning](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usingversioning.htm#ScopeVersioning)
 
