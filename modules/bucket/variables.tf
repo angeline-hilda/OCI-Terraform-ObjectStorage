@@ -12,13 +12,16 @@ variable "bucket_namespace" {
 
 
 variable "bucket_name" {
-  
+  description = "The name of the OCI Object Storage bucket. Must be unique within the namespace."
+  type        = string
 }
 variable "storage_tier" {
   
 }
 
 variable "kms_key_id" {
+  description = "OCID of the KMS key used for encryption in OCI Vault."
+  type        = string
   
 }
 

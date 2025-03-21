@@ -5,6 +5,9 @@ variable "bucket_namespace" {
 
 
 variable "bucket_name" {
+    description = "The name of the OCI Object Storage bucket. Must be unique within the namespace."
+    type        = string
+
 }
   
 

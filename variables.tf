@@ -30,10 +30,13 @@ variable "user_id" {
 }
 
 variable "api_fingerprint" {
-
+  type        = string
+  description = "The fingerprint of the public key uploaded to OCI for API authentication"
 }
+
 variable "api_private_key_path" {
-
-
+  type        = string
+  description = "The file path to the private key used for OCI API authentication"
 }
+
 
