@@ -42,7 +42,7 @@ Defines rules for automatic management of objects, such as archiving or deleting
 Stores read/write access logs for auditing and tracking.
 
 
-> **Note:** Before enabling these features, check their [interaction with other Object Storage features](##Documentation). Not all features can be enabled simultaneously, and some may have dependencies or limitations when used together.
+> **Note:** Before enabling these features, check their [interaction with other Object Storage features](#Documentation). Not all features can be enabled simultaneously, and some may have dependencies or limitations when used together.
 
 
 ## Using with Terraform
