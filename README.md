@@ -91,6 +91,6 @@ tofu destroy # or terraform destroy
 - [OCI Object Versioning](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usingversioning.htm#ScopeVersioning)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/angeline-hilda/OCI-Terraform-ObjectStorage/blob/master/LICENSE)file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/angeline-hilda/OCI-Terraform-ObjectStorage/blob/master/LICENSE) file for details.
 
 
